@@ -28,7 +28,7 @@
 }
 
 .sobre-texto{
-  max-width:700px;
+  max-width:550px;
   line-height:2.0;
   font-size:17px;
   color:#ccc;
@@ -405,6 +405,16 @@ nav.active{
 }
 
 }
+  .botao-lermais{
+  margin-top:20px;
+  padding:10px 25px;
+  background:#c9a24d;
+  border:none;
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:4px;
+}
 </style>
 </head>
 
@@ -531,23 +541,29 @@ nav.active{
       <img src="imagens/marmoria-depois.jpeg" alt="Marmoraria depois">
     </div>
 
-    <div class="sobre-texto">
-      Nossa história começou em agosto de 2020, de forma simples e dedicada. Na varanda de casa, com poucas ferramentas, atuávamos exclusivamente como porcelanataria, realizando pequenos trabalhos em porcelanato, como nichos e lavatórios, sempre com foco em qualidade e acabamento.
+  <div class="sobre-texto">
 
-Com o tempo, passamos a desenvolver bancadas de cozinha e firmamos parcerias com escritórios de arquitetura, o que elevou o nível de complexidade dos projetos e impulsionou uma evolução constante em técnica, precisão e padrão de entrega. A cada novo desafio, aprimoramos processos e reforçamos nosso compromisso com a excelência.
+<p>
+Nossa história começou em agosto de 2020, de forma simples e dedicada. Na varanda de casa, com poucas ferramentas, atuávamos exclusivamente como porcelanataria, realizando pequenos trabalhos em porcelanato, como nichos e lavatórios, sempre com foco em qualidade e acabamento.
+</p>
 
-Hoje, somos uma marmoraria e porcelanataria completa, trabalhando com uma ampla variedade de materiais, como granitos, mármores, quartzo, quartzito e lâminas ultracompactas. Atuamos em um barracão amplo e estruturado, equipado com máquinas e ferramentas de última geração, incluindo sistemas automáticos de corte reto e corte em 45°, garantindo máxima precisão e qualidade em cada peça.
+<div id="texto-completo" style="display:none;">
 
-Mesmo com tecnologia avançada e processos automatizados, mantemos aquilo que nos define desde o início: o capricho artesanal. Cada projeto é tratado de forma única, utilizando insumos de alta qualidade e atenção aos detalhes, resultando em peças exclusivas de alto padrão, produzidas com excelência do início ao fim.
-      <br><br>
+<p>
+Com o tempo, passamos a desenvolver bancadas de cozinha e firmamos parcerias com escritórios de arquitetura, o que elevou o nível de complexidade dos projetos e impulsionou uma evolução constante em técnica, precisão e padrão de entrega.
+</p>
 
-      Com o tempo, a busca constante por qualidade e a formação de parcerias com arquitetas e empresas de móveis planejados impulsionaram nossa evolução. Os projetos se tornaram mais complexos, o nível de exigência aumentou e, junto com ele, nossa expertise técnica e acabamento.
+<p>
+Hoje, somos uma marmoraria e porcelanataria completa, trabalhando com uma ampla variedade de materiais, como granitos, mármores, quartzo, quartzito e lâminas ultracompactas.
+</p>
 
-      <br><br>
+</div>
 
-      Hoje, somos uma marmoraria e porcelanataria completa, atuando em um barracão amplo e estruturado, equipado com máquinas de última geração, garantindo precisão, padrão elevado e qualidade total.
-    </div>
+<button onclick="mostrarTexto()" class="botao-lermais">
+Ler mais
+</button>
 
+</div>
   </div>
 </section>
 
@@ -571,21 +587,25 @@ Mesmo com tecnologia avançada e processos automatizados, mantemos aquilo que no
 </section>
 
 <script>
+
 function abrirImagem(img){
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-  document.getElementById("lightbox-title").innerText = img.dataset.title;
-  document.getElementById("lightbox-desc").innerText = img.dataset.desc;
+...
 }
 
 function fecharImagem(){
-  document.getElementById("lightbox").style.display = "none";
+...
 }
 
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+function mostrarTexto(){
+  var texto = document.getElementById("texto-completo");
+
+  if(texto.style.display === "none"){
+    texto.style.display = "block";
+  } else {
+    texto.style.display = "none";
+  }
 }
+
 </script>
-
 </body>
 </html>
