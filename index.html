@@ -121,6 +121,7 @@ nav a:hover{
   z-index:2;
 }
 
+/* TEXTO PRINCIPAL */
 .hero-frase{
   font-family:'Playfair Display', serif;
   font-size:33px;
@@ -128,8 +129,35 @@ nav a:hover{
   max-width:1050px;
   margin:0 auto 30px;
   line-height:1.4;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* sombra para contraste */
 }
 
+/* SUBTÍTULO */
+.hero-subfrase{
+  font-size:22px; 
+  color:#000;    
+  margin-bottom:40px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* sombra leve */
+}
+
+/* BOTÃO DO HERO */
+.hero a{
+  display:inline-block;
+  padding:16px 45px;
+  background: linear-gradient(135deg, #25d366, #1ebe5b);
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  text-transform:uppercase;
+  margin-top:20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.hero a:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
 /* ================= SUBFRASE ================= */
 .hero-subfrase{
   font-size:22px; /* maior */
