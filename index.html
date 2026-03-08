@@ -601,11 +601,14 @@ function fecharImagem(){
 
 function mostrarTexto(){
   const texto = document.getElementById("texto-completo");
+  const botao = document.querySelector(".botao-lermais");
 
   if(texto.style.display === "none"){
     texto.style.display = "block";
+    botao.innerText = "Ler menos";
   } else {
     texto.style.display = "none";
+    botao.innerText = "Ler mais";
   }
 }
 
