@@ -194,15 +194,17 @@ nav a:hover{
   gap:20px;
 }
 
-.galeria img{
-  width:100%;
-  height:auto;
-  border-radius:6px;
-  cursor:pointer;
-  transition:transform .3s;
-}
-.galeria img:hover{
-  transform:scale(1.03);
+@media(max-width:768px){
+  .galeria {
+    grid-template-columns: 1fr; /* 1 coluna = imagens grandes */
+    gap: 15px; /* espaço entre imagens */
+  }
+
+  .galeria img {
+    width: 250%; /* quase toda a largura */
+    max-width: 400px; /* não deixa ficar gigante */
+    margin: 0 auto; /* centraliza */
+  }
 }
 
 /* ajuste para celular */
