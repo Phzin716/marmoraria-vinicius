@@ -595,11 +595,10 @@ function abrirImagem(img){
 function fecharImagem(){
 ...
 }
-
 function mostrarTexto(){
   var texto = document.getElementById("texto-completo");
 
-  if(texto.style.display === "none"){
+  if(texto.style.display === "none" || texto.style.display === ""){
     texto.style.display = "block";
   } else {
     texto.style.display = "none";
