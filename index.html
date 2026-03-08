@@ -480,14 +480,6 @@ nav.active{
   border-radius:4px;
 }
   /* BOTÃO FIXO WHATSAPP */
-<!-- BOTÃO FIXO WHATSAPP -->
-<a href="https://wa.me/5519994844122" target="_blank" class="whatsapp-fixo">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icone">
-  <span class="whatsapp-texto">Solicite um orçamento</span>
-</a>
-
-<style>
-/* BOTÃO FIXO WHATSAPP */
 .whatsapp-fixo {
   position: fixed;
   right: 20px;
@@ -503,13 +495,12 @@ nav.active{
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   z-index: 11000;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s;
   font-size: 16px;
 }
 
 .whatsapp-fixo:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .whatsapp-icone {
@@ -518,33 +509,10 @@ nav.active{
   flex-shrink: 0;
 }
 
-/* Texto que aparece só no desktop */
 .whatsapp-texto {
   display: inline-block;
 }
 
-/* MOBILE: só mostra o ícone + animação de pulso */
-@media(max-width:768px){
-  .whatsapp-fixo {
-    padding: 12px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    animation: pulse 2s infinite;
-  }
-  .whatsapp-texto {
-    display: none;
-  }
-}
-
-/* Animação de pulso para celular */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-</style>
 /* MOBILE: só mostra o ícone */
 @media(max-width:768px){
   .whatsapp-fixo {
