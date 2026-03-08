@@ -589,21 +589,27 @@ Ler mais
 <script>
 
 function abrirImagem(img){
-...
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox-title").innerText = img.dataset.title;
+  document.getElementById("lightbox-desc").innerText = img.dataset.desc;
 }
 
 function fecharImagem(){
-...
+  document.getElementById("lightbox").style.display = "none";
 }
-function mostrarTexto(){
-  var texto = document.getElementById("texto-completo");
 
-  if(texto.style.display === "none" || texto.style.display === ""){
+function mostrarTexto(){
+  const texto = document.getElementById("texto-completo");
+
+  if(texto.style.display === "none"){
     texto.style.display = "block";
   } else {
     texto.style.display = "none";
   }
 }
+
+</script>
 
 </script>
 </body>
