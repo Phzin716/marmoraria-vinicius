@@ -206,9 +206,16 @@ nav a:hover{
 }
 
 /* ajuste para celular */
-@media (max-width:768px){
-  .galeria{
-    grid-template-columns:repeat(2,1fr);
+@media(max-width:768px){
+  .galeria {
+    grid-template-columns: 1fr; /* 1 coluna = imagens grandes */
+    gap: 15px; /* espaço entre imagens */
+  }
+
+  .galeria img {
+    width: 90%; /* quase toda a largura */
+    max-width: 400px; /* não deixa ficar gigante */
+    margin: 0 auto; /* centraliza */
   }
 }
 /* ================= BOTÃO ================= */
