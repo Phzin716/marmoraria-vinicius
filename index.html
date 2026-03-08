@@ -442,11 +442,12 @@ nav.active{
   border-radius:4px;
 }
 
-/* ================= BOTÃO FIXO WHATSAPP ================= */
-<!-- BOTÃO FIXO DO WHATSAPP -->
+<!-- BOTÃO FIXO WHATSAPP -->
 <a href="https://wa.me/5519994844122" target="_blank" class="whatsapp-fixo">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icone">
-  Solicite um orçamento
+  <svg class="whatsapp-icone" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.52 3.48A11.863 11.863 0 0012 0C5.372 0 0 5.372 0 12c0 2.117.554 4.104 1.52 5.88L0 24l6.28-1.52A11.933 11.933 0 0012 24c6.628 0 12-5.372 12-12 0-3.182-1.24-6.182-3.48-8.52zm-8.52 19c-2.016 0-3.927-.54-5.56-1.52l-.4-.24-3.72.88.88-3.64-.26-.41A9.93 9.93 0 012 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.24-7.88c-.28-.14-1.64-.8-1.9-.88s-.44-.14-.63.14-.72.88-.88 1.06-.32.21-.6.07c-.28-.14-1.16-.42-2.21-1.36-.82-.73-1.37-1.62-1.53-1.9s-.02-.42.12-.56c.12-.12.28-.28.42-.42.14-.14.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.63-1.52-.87-2.08-.23-.54-.46-.47-.63-.48l-.54-.01c-.18 0-.48.07-.73.35s-.95.93-.95 2.27 1 2.63 1.14 2.81c.14.18 1.95 2.97 4.74 4.15 3.31 1.41 3.31 0.94 3.91.88.6-.07 1.94-.79 2.21-1.56.27-.77.27-1.42.19-1.56-.07-.14-.27-.21-.55-.35z"/>
+  </svg>
+  <span class="whatsapp-texto">Solicite um orçamento</span>
 </a>
 
 <style>
@@ -460,23 +461,42 @@ nav.active{
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 50px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   z-index: 11000;
   transition: transform 0.2s;
-  font-size: 16px; /* garante o tamanho do texto */
+  font-size: 16px;
 }
 
 .whatsapp-fixo:hover {
   transform: scale(1.05);
 }
 
-/* força o tamanho da imagem do WhatsApp */
 .whatsapp-icone {
-  width: 24px !important;
-  height: 24px !important;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Texto que só aparece no desktop */
+.whatsapp-texto {
+  display: inline-block;
+}
+
+/* MOBILE: só mostra o ícone */
+@media(max-width:768px){
+  .whatsapp-fixo {
+    padding: 12px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+  }
+  .whatsapp-texto {
+    display: none;
+  }
 }
 </style>
 </head>
