@@ -381,6 +381,16 @@ nav a{
 @media(max-width:900px){
 
 .menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+  color:white;
+}
+
+/* CELULAR */
+@media(max-width:900px){
+
+.menu-toggle{
   display:block;
 }
 
@@ -417,10 +427,11 @@ nav.active{
   height:110px;
   object-fit:cover;
   border-radius:6px;
+
 }
 
 }
-  .botao-lermais{
+.botao-lermais{
   margin-top:20px;
   padding:10px 25px;
   background:#c9a24d;
@@ -430,11 +441,44 @@ nav.active{
   cursor:pointer;
   border-radius:4px;
 }
+
+/* ================= BOTÃO FIXO WHATSAPP ================= */
+.whatsapp-fixo {
+  position: fixed;           /* fixa na tela */
+  right: 20px;               /* distância da borda direita */
+  bottom: 40px;              /* distância da parte inferior */
+  background: #25d366;       /* cor oficial WhatsApp */
+  color: #fff;               /* texto branco */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;                 /* espaço entre ícone e texto */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 11000;            /* acima de todos os elementos */
+  transition: transform 0.2s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.05);    /* efeito leve ao passar o mouse */
+}
+
+.whatsapp-icone {
+  width: 24px;               /* tamanho do ícone */
+  height: 24px;
+}
 </style>
 </head>
 
 <body>
 
+<!-- BOTÃO FIXO DO WHATSAPP -->
+<a href="https://wa.me/5519994844122" target="_blank" class="whatsapp-fixo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icone">
+  Solicite um orçamento
+</a>
 <header>
   <div class="logo">
     <img src="imagens/logo-teste.jpeg" alt="Logo BC Marmoraria">
