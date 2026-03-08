@@ -208,14 +208,15 @@ nav a:hover{
 /* ajuste para celular */
 @media(max-width:768px){
   .galeria {
-    grid-template-columns: 1fr; /* 1 coluna = imagens grandes */
-    gap: 15px; /* espaço entre imagens */
+    grid-template-columns: repeat(2, 1fr); /* duas colunas */
+    gap: 20px; /* aumenta o espaço entre imagens */
   }
 
   .galeria img {
-    width: 90%; /* quase toda a largura */
-    max-width: 400px; /* não deixa ficar gigante */
-    margin: 0 auto; /* centraliza */
+    width: 100%;    /* ocupa a coluna toda */
+    max-width: 300px; /* limita o tamanho da imagem */
+    height: auto;
+    margin: 0 auto; /* centraliza na coluna */
   }
 }
 /* ================= BOTÃO ================= */
