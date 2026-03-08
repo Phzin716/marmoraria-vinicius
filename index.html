@@ -431,9 +431,59 @@ nav.active{
   cursor:pointer;
   border-radius:4px;
 }
+  /* BOTÃO FIXO WHATSAPP */
+.whatsapp-fixo {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 11000;
+  transition: transform 0.2s;
+  font-size: 16px;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-icone {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.whatsapp-texto {
+  display: inline-block;
+}
+
+/* MOBILE: só mostra o ícone */
+@media(max-width:768px){
+  .whatsapp-fixo {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  .whatsapp-texto {
+    display: none;
+  }
+}
 </style>
 </head>
-
+<a href="https://wa.me/5519994844122" target="_blank" class="whatsapp-fixo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icone">
+  <span class="whatsapp-texto">Solicite um orçamento</span>
+</a>
 <body>
 
 <header>
