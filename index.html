@@ -468,14 +468,15 @@ nav.active{
 /* MOBILE: só mostra o ícone */
 @media(max-width:768px){
   .whatsapp-fixo {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border-radius: 50%;
+    width: auto; /* deixa o tamanho automático */
+    height: 40px; /* menor que no desktop */
+    padding: 8px 12px;
+    border-radius: 30px;
     justify-content: center;
+    font-size: 12px; /* texto menor */
   }
   .whatsapp-texto {
-    display: none;
+    display: inline-block; /* mostra o texto */
   }
 }
 </style>
@@ -555,10 +556,6 @@ nav.active{
        onclick="abrirImagem(this)">
 
 </div>
-
-<a href="https://wa.me/5519994844122" target="_blank">
-  Solicitar orçamento
-</a>
 
 </div>
 
