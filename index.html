@@ -323,16 +323,18 @@ section h3{
   margin-top:10px;
 }
 
-.servicos-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  gap: 20px; /* aumenta o espaço entre imagens */
 }
 
-.servicos-grid img{
-  width:100%;
-  height:auto;
-  border-radius:6px;
+.servicos-grid img {
+  width: 100%;
+  max-width: 350px; /* aumenta o tamanho máximo das imagens */
+  height: auto;
+  margin: 0 auto;   /* centraliza dentro da coluna */
+  border-radius: 6px;
 }
 .contact-box{
   text-align:center;
