@@ -1,3 +1,5 @@
+vou te passar um html completo e quero fazer algumas alterações e vc me diz como fazer 
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -381,16 +383,6 @@ nav a{
 @media(max-width:900px){
 
 .menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
-  color:white;
-}
-
-/* CELULAR */
-@media(max-width:900px){
-
-.menu-toggle{
   display:block;
 }
 
@@ -427,11 +419,10 @@ nav.active{
   height:110px;
   object-fit:cover;
   border-radius:6px;
-
 }
 
 }
-.botao-lermais{
+  .botao-lermais{
   margin-top:20px;
   padding:10px 25px;
   background:#c9a24d;
@@ -441,66 +432,11 @@ nav.active{
   cursor:pointer;
   border-radius:4px;
 }
-
-<style>
-/* BOTÃO FIXO WHATSAPP */
-.whatsapp-fixo {
-  position: fixed;
-  right: 20px;
-  bottom: 40px;
-  background: #25d366;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 11000;
-  transition: transform 0.2s;
-  font-size: 16px;
-}
-
-.whatsapp-fixo:hover {
-  transform: scale(1.05);
-}
-
-.whatsapp-icone {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-.whatsapp-texto {
-  display: inline-block;
-}
-
-/* MOBILE: só mostra o ícone */
-@media(max-width:768px){
-  .whatsapp-fixo {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border-radius: 50%;
-    justify-content: center;
-  }
-  .whatsapp-texto {
-    display: none;
-  }
-}
-</style>
 </style>
 </head>
 
 <body>
 
-<!-- BOTÃO FIXO DO WHATSAPP -->
-<a href="https://wa.me/5519994844122" target="_blank" class="whatsapp-fixo">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icone">
-  Solicite um orçamento
-</a>
 <header>
   <div class="logo">
     <img src="imagens/logo-teste.jpeg" alt="Logo BC Marmoraria">
