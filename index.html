@@ -34,7 +34,27 @@
   font-size:17px;
   color:#ccc;
 }
+/* ===== LER MAIS / LER MENOS SUAVE ===== */
+#texto-completo {
+  max-height: 0;              /* começa fechado */
+  overflow: hidden;           /* esconde o que não cabe */
+  transition: max-height 0.5s ease; /* animação suave */
+}
 
+#texto-completo.show {
+  max-height: 500px;          /* altura máxima quando aberto */
+}
+
+.botao-lermais {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #c9a24d;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
 /* MOBILE */
 @media(max-width:900px){
   .sobre-box{
@@ -753,11 +773,11 @@ function mostrarTexto(){
   const texto = document.getElementById("texto-completo");
   const botao = document.querySelector(".botao-lermais");
 
-  if(texto.style.display === "none"){
-    texto.style.display = "block";
+  texto.classList.toggle("show");  // adiciona ou remove a classe "show"
+
+  if(texto.classList.contains("show")){
     botao.innerText = "Ler menos";
   } else {
-    texto.style.display = "none";
     botao.innerText = "Ler mais";
   }
 }
