@@ -472,21 +472,25 @@ nav.active{
 }
 
 }
-@media(max-width:768px){
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px; /* diminui o espaço entre as imagens apenas no PC */
+}
 
+/* Para celular */
+@media(max-width:768px){
   .servicos-grid{
-    grid-template-columns:repeat(3,1fr); /* mantém 3 colunas */
-    gap:2px; /* você pode ajustar o espaçamento entre imagens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* mantém o espaçamento maior no celular */
   }
 
   .servicos-grid img{
-    width:100%;      /* ocupa toda a largura da coluna */
-    height:auto;     /* deixa a altura proporcional */
-    max-height:200px; /* limite máximo de altura (aumentei de 110 para 180) */
+    width:100%;
+    height:140px; /* tamanho maior no celular */
     object-fit:cover;
     border-radius:6px;
   }
-
 }
   .botao-lermais{
   margin-top:20px;
