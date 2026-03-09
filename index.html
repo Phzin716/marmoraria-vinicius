@@ -186,15 +186,16 @@ nav a:hover{
 }
 
 /* ================= GALERIA ================= */
-.galeria{
+/* ===== GALERIA ===== */
+.galeria {
   max-width:1320px;
   margin:0 auto 60px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* aumento do mínimo para imagens maiores */
+  grid-template-columns:repeat(auto-fit,minmax(250px,400px)); /* imagens maiores no PC */
   gap:20px;
 }
 
-.galeria img{
+.galeria img {
   width:100%;
   height:auto;
   border-radius:6px;
@@ -202,19 +203,22 @@ nav a:hover{
   transition:transform .3s;
 }
 
-.galeria img:hover{
+.galeria img:hover {
   transform:scale(1.03);
 }
 
 /* RESPONSIVO PARA CELULAR */
 @media(max-width:768px){
-  .galeria{
-    grid-template-columns:repeat(2,1fr); /* duas colunas no celular */
-    gap:15px; /* menos espaçamento para caber melhor */
+  .galeria {
+    grid-template-columns:repeat(2,1fr); /* duas colunas */
+    gap:20px; /* espaçamento entre imagens */
   }
-  
-  .galeria img{
-    border-radius:4px; /* um pouco menos arredondado no celular */
+
+  .galeria img {
+    width:100%;        /* ocupa a coluna toda */
+    max-width:300px;   /* limita o tamanho da imagem */
+    height:auto;
+    margin:0 auto;     /* centraliza na coluna */
   }
 }
 /* ajuste para celular */
