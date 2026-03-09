@@ -196,16 +196,16 @@ nav a:hover{
 
 @media(max-width:768px){
   .galeria {
-    grid-template-columns: 1fr; /* 1 coluna = imagens grandes */
-    gap: 15px; /* espaço entre imagens */
+    grid-template-columns: repeat(2, 1fr); /* duas colunas */
+    gap: 20px; /* aumenta o espaço entre imagens */
   }
 
- .galeria img {
-  width: 250%;
-  max-width: 400px;  /* aumentou ainda mais */
-  height: auto;
-  margin: 0 auto;
-}
+  .galeria img {
+    width: 100%;    /* ocupa a coluna toda */
+    max-width: 300px; /* limita o tamanho da imagem */
+    height: auto;
+    margin: 0 auto; /* centraliza na coluna */
+  }
 }
 
 /* ajuste para celular */
