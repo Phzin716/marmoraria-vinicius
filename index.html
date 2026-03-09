@@ -186,7 +186,24 @@ nav a:hover{
 }
 
 /* ================= GALERIA ================= */
-@media(max-width:768px){
+/* ===== GALERIA NO PC ===== */
+@media(min-width:769px){
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 imagens por linha */
+    gap: 15px; /* diminui o espaçamento se quiser */
+    max-width: 1200px; /* largura máxima da galeria */
+    margin: 0 auto; /* centraliza a galeria */
+  }
+
+  .galeria img {
+    width: 100%;   /* ocupa a coluna inteira */
+    height: auto;  /* mantém proporção correta */
+    border-radius: 6px;
+    display: block;
+  }
+}
+  @media(max-width:768px){
   .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* duas colunas */
