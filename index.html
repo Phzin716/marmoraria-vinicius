@@ -190,7 +190,7 @@ nav a:hover{
   max-width:1320px;
   margin:0 auto 60px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* aumento do mínimo para imagens maiores */
   gap:20px;
 }
 
@@ -201,11 +201,22 @@ nav a:hover{
   cursor:pointer;
   transition:transform .3s;
 }
+
 .galeria img:hover{
   transform:scale(1.03);
 }
 
-
+/* RESPONSIVO PARA CELULAR */
+@media(max-width:768px){
+  .galeria{
+    grid-template-columns:repeat(2,1fr); /* duas colunas no celular */
+    gap:15px; /* menos espaçamento para caber melhor */
+  }
+  
+  .galeria img{
+    border-radius:4px; /* um pouco menos arredondado no celular */
+  }
+}
 /* ajuste para celular */
 @media (max-width:768px){
   .galeria{
