@@ -460,20 +460,37 @@ nav.active{
   display:flex;
 }
 
-}
-@media(max-width:768px){
-
+/* ================= SERVIÇOS ENTREGUES ================= */
 .servicos-grid{
-  grid-template-columns:repeat(3,1fr);
+  display:grid;
+  gap:15px; /* espaçamento entre imagens */
 }
 
-.servicos-grid img{
-  width:100%;
-  height:110px;
-  object-fit:cover;
-  border-radius:6px;
+/* PC: 3 imagens por linha */
+@media(min-width:769px){
+  .servicos-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .servicos-grid img{
+    width:100%;
+    height:auto; /* mantém proporção */
+    border-radius:6px;
+  }
 }
 
+/* CELULAR: mantém 3 imagens por linha e tamanho menor se quiser */
+@media(max-width:768px){
+  .servicos-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .servicos-grid img{
+    width:100%;
+    height:110px; /* altura fixa para celular */
+    object-fit:cover; /* corta se necessário mantendo proporção */
+    border-radius:6px;
+  }
 }
   .botao-lermais{
   margin-top:20px;
