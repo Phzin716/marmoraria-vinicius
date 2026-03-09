@@ -474,16 +474,18 @@ nav.active{
 }
 @media(max-width:768px){
 
-.servicos-grid{
-  grid-template-columns:repeat(3,1fr);
-}
+  .servicos-grid{
+    grid-template-columns:repeat(3,1fr); /* mantém 3 colunas */
+    gap:10px; /* você pode ajustar o espaçamento entre imagens */
+  }
 
-.servicos-grid img{
-  width:100%;
-  height:110px;
-  object-fit:cover;
-  border-radius:6px;
-}
+  .servicos-grid img{
+    width:100%;      /* ocupa toda a largura da coluna */
+    height:auto;     /* deixa a altura proporcional */
+    max-height:200px; /* limite máximo de altura (aumentei de 110 para 180) */
+    object-fit:cover;
+    border-radius:6px;
+  }
 
 }
   .botao-lermais{
