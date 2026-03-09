@@ -187,16 +187,16 @@ nav a:hover{
 
 /* ================= GALERIA ================= */
 @media(max-width:768px){
+  .@media(min-width:769px){
   .galeria {
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* duas colunas */
-    gap: 20px; /* aumenta o espaço entre imagens */
+    gap: 20px; /* espaço entre imagens */
   }
 
   .galeria img {
-    width: 250%;    /* ocupa a coluna toda */
-    max-width: 400px; /* limita o tamanho da imagem */
-    height: auto;
-    margin: 0 auto; /* centraliza na coluna */
+    width: 250%;
+    height: auto; /* mantém proporção */
   }
 }
 /* ================= BOTÃO ================= */
