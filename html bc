@@ -1,0 +1,714 @@
+html lang=pt-BR
+head
+meta charset=UTF-8
+titleBC Marmorariatitle
+meta name=viewport content=width=device-width, initial-scale=1.0
+link href=httpsfonts.googleapis.comcss2family=Playfair+Displaywght@400;500;600&display=swap rel=stylesheet
+style 
+ ===== SOBRE COM IMAGENS CORRETAS ===== 
+.sobre-box{
+  displayflex;
+  justify-contentspace-between;  imagem esquerda, texto direita 
+  align-itemsflex-start;          topo alinhado 
+  gap40px;
+}
+
+.sobre-imagens{
+  displayflex;
+  flex-directioncolumn;
+  gap16px;
+  flex-shrink0;    impede que a imagem encolha 
+}
+
+.sobre-imagens img{
+  width450px;      aumenta as imagens 
+  heightauto;
+  displayblock;
+  border-radius6px;
+}
+
+.sobre-texto{
+  max-width550px;
+  line-height2.0;
+  font-size17px;
+  color#ccc;
+}
+
+ MOBILE 
+@media(max-width900px){
+  .sobre-box{
+    flex-directioncolumn;
+    align-itemscenter;
+    text-aligncenter;
+  }
+
+  .sobre-imagens img{
+    width90%;
+    max-width450px;
+  }
+}
+{
+  margin0;
+  padding0;
+  box-sizingborder-box;
+  font-familyArial, Helvetica, sans-serif;
+}
+
+body{
+  background#0f0f0f;
+  color#fff;
+}
+
+ ================= HEADER ================= 
+header{
+  background#000;
+  padding20px 40px;
+  displayflex;
+  justify-contentspace-between;
+  align-itemscenter;
+  border-bottom3px solid #c9a24d;
+  positionrelative;
+  z-index10000;
+}
+
+.logo img{
+  height120px;
+}
+
+.frase-topo{
+  font-family 'Playfair Display', serif;
+  font-size32px;
+  color#ddd;
+  text-aligncenter;
+  flex1;
+  letter-spacing1px;
+}
+
+nav a{
+  color#fff;
+  text-decorationnone;
+  margin-left25px;
+  font-size14px;
+  text-transformuppercase;
+}
+
+nav ahover{
+  color#c9a24d;
+}
+
+ ================= HERO ================= 
+ ================= HERO ================= 
+.hero{
+  width100%;
+  background-imageurl(imagensfundo-imagem-marmore.jpeg);
+  background-positioncenter;
+  background-sizecover;
+  background-repeatno-repeat;
+  positionrelative;
+  padding120px 20px 100px;
+  text-aligncenter;
+}
+
+.herobefore{
+  content;
+  positionabsolute;
+  inset0;
+  backgroundrgba(0,0,0,0.45);
+}
+
+.hero  {
+  positionrelative;
+  z-index2;
+}
+
+ TEXTO PRINCIPAL 
+.hero-frase{
+  font-family'Playfair Display', serif;
+  font-size33px;
+  font-weight500;
+  max-width1050px;
+  margin0 auto 30px;
+  line-height1.4;
+  text-shadow 1px 1px 4px rgba(0,0,0,0.7);
+  opacity 0;
+  transform translateY(20px);
+  animation heroAnim 0.8s forwards;
+}
+
+ SUBTÍTULO 
+.hero-subfrase{
+  font-size22px;
+  color#000;
+  margin-bottom40px;
+  text-shadow 1px 1px 3px rgba(0,0,0,0.6);
+  opacity 0;
+  transform translateY(20px);
+  animation heroAnim 0.8s forwards;
+  animation-delay 0.3s;
+}
+
+ BOTÃO DO HERO 
+.hero a{
+  displayinline-block;
+  padding16px 45px;
+  background linear-gradient(135deg, #25d366, #1ebe5b);
+  color#000;
+  font-weightbold;
+  text-decorationnone;
+  text-transformuppercase;
+  margin-top20px;
+  box-shadow 0 4px 12px rgba(0,0,0,0.3);
+  transition all 0.3s;
+  opacity 0;
+  transform translateY(20px);
+  animation heroAnim 0.8s forwards;
+  animation-delay 0.6s;
+}
+
+.hero ahover{
+  transform scale(1.05);
+  box-shadow 0 6px 16px rgba(0,0,0,0.4);
+}
+
+ ANIMAÇÃO DE ENTRADA 
+@keyframes heroAnim {
+  to {
+    opacity 1;
+    transform translateY(0);
+  }
+}
+
+ ================= SUBFRASE ================= 
+.hero-subfrase{
+  font-size22px;  maior 
+  color#000;     preta 
+  margin-bottom40px;
+}
+
+ ================= GALERIA ================= 
+@media(max-width768px){
+  .galeria {
+    display grid;
+    grid-template-columns repeat(2, 1fr);  duas colunas 
+    gap 20px;  espaço entre imagens 
+  }
+
+  .galeria img {
+    width 200%;
+    height auto;  mantém proporção 
+     height auto;  mantém proporção 
+    margin 0 auto;  centraliza na coluna 
+  }
+}
+ ================= BOTÃO ================= 
+.hero a{
+  displayinline-block;
+  padding16px 45px;
+  background#25d366;
+  color#000;
+  font-weightbold;
+  text-decorationnone;
+  text-transformuppercase;
+  margin-top20px;
+}
+
+ ================= LIGHTBOX ================= 
+.lightbox{
+  positionfixed;
+  top0;
+  left0;
+  width100%;
+  height100%;
+  backgroundrgba(0,0,0,0.9);
+  displaynone;
+  align-itemscenter;
+  justify-contentcenter;
+  z-index9999;
+}
+
+.lightbox-content{
+  displayflex;
+  flex-directioncolumn;
+  align-itemscenter;
+  gap20px;
+  max-width90%;
+}
+
+.lightbox img{
+  max-width90%;
+  max-height70vh;
+  border-radius8px;
+}
+
+.lightbox-text{
+  colorwhite;
+  text-aligncenter;
+  max-width600px;
+}
+.lightbox-text h2{
+  font-size24px;
+  margin-bottom10px;
+  font-weight600;
+}
+
+ RESPONSIVO 
+@media(max-width900px){
+  .lightbox-content{
+    flex-directioncolumn;
+    align-itemscenter;
+  }
+  .lightbox-text{
+    max-width90%;
+    margin-top15px;
+  }
+}
+
+ ================= SEÇÕES ================= 
+section{
+  padding80px 40px;
+  max-width1200px;
+  marginauto;
+}
+
+section h3{
+  text-aligncenter;
+  font-size30px;
+  margin-bottom40px;
+}
+
+.sobre p{
+  max-width900px;
+  marginauto;
+  text-aligncenter;
+  line-height1.9;
+  color#ccc;
+}
+
+.localizacao-box{
+  text-aligncenter;
+  max-width800px;
+  marginauto;
+}
+
+.localizacao-box p a{
+  color#c9a24d;
+  text-decorationunderline;
+  font-weightbold;
+}
+
+.localizacao-box iframe{
+  width100%;
+  height300px;
+  border0;
+  border-radius8px;
+  margin-top10px;
+}
+
+.servicos-grid{
+  displaygrid;
+  grid-template-columnsrepeat(auto-fit,minmax(200px,1fr));
+  gap15px;
+}
+
+.servicos-grid img{
+  width100%;
+  heightauto;
+  border-radius6px;
+}
+.contact-box{
+  text-aligncenter;
+  font-size18px;
+  line-height2;
+}
+.contact-box a{
+  color#c9a24d;
+  text-decorationnone;
+  font-weightbold;
+}
+
+ ===== AJUSTE PARA CELULAR (HEADER) ===== 
+@media(max-width900px){
+
+header{
+  displayflex;
+  flex-directionrow;
+  justify-contentspace-between;
+  align-itemscenter;
+  padding15px 20px;
+}
+
+.logo img{
+  height60px;
+}
+
+.frase-topo{
+  font-size18px;
+  text-aligncenter;
+  flex1;
+}
+
+.menu-toggle{
+  displayblock;
+  font-size28px;
+  cursorpointer;
+}
+
+}
+nav{
+  displayflex;
+  flex-wrapwrap;
+  justify-contentcenter;
+  gap15px;
+}
+
+nav a{
+  margin-left0;
+}
+
+.logo img{
+  height80px;
+}
+
+}
+
+ ===== AJUSTE SOBRE NÓS CELULAR ===== 
+@media(max-width900px){
+
+.sobre-imagens img{
+  width100%;
+  max-width400px;
+}
+
+.sobre-texto{
+  font-size16px;
+  line-height1.8;
+  padding0 10px;
+}
+
+}
+@media(max-width768px){
+
+.hero{
+  padding80px 15px 70px;
+}
+
+.hero-frase{
+  font-size24px;
+}
+
+.hero-subfrase{
+  font-size16px;
+}
+
+.hero a{
+  padding14px 30px;
+  font-size14px;
+}
+
+}
+
+ BOTÃO HAMBURGUER 
+.menu-toggle{
+  displaynone;
+  font-size30px;
+  cursorpointer;
+  colorwhite;
+}
+
+ CELULAR 
+@media(max-width900px){
+
+.menu-toggle{
+  displayblock;
+}
+
+nav{
+  displaynone;
+  flex-directioncolumn;
+  width100%;
+  text-aligncenter;
+  background#000;
+  positionabsolute;
+  top100%;
+  left0;
+  z-index9999;
+}
+
+nav a{
+  padding15px;
+  border-top1px solid #333;
+}
+
+nav.active{
+  displayflex;
+}
+
+}
+@media(max-width768px){
+
+.servicos-grid{
+  grid-template-columnsrepeat(3,1fr);
+}
+
+.servicos-grid img{
+  width100%;
+  height110px;
+  object-fitcover;
+  border-radius6px;
+}
+
+}
+  .botao-lermais{
+  margin-top20px;
+  padding10px 25px;
+  background#c9a24d;
+  bordernone;
+  color#000;
+  font-weightbold;
+  cursorpointer;
+  border-radius4px;
+}
+   BOTÃO FIXO WHATSAPP 
+.whatsapp-fixo {
+  position fixed;
+  right 20px;
+  bottom 40px;
+  background #25d366;
+  color #fff;
+  font-weight bold;
+  text-decoration none;
+  padding 12px 20px;
+  border-radius 50px;
+  display flex;
+  align-items center;
+  gap 10px;
+  box-shadow 0 4px 8px rgba(0,0,0,0.3);
+  z-index 11000;
+  transition transform 0.2s;
+  font-size 16px;
+}
+
+.whatsapp-fixohover {
+  transform scale(1.05);
+}
+
+.whatsapp-icone {
+  width 24px;
+  height 24px;
+  flex-shrink 0;
+}
+
+.whatsapp-texto {
+  display inline-block;
+}
+
+ MOBILE só mostra o ícone 
+@media(max-width768px){
+  .whatsapp-fixo {
+    width auto;  deixa o tamanho automático 
+    height 40px;  menor que no desktop 
+    padding 8px 12px;
+    border-radius 30px;
+    justify-content center;
+    font-size 10px;  texto menor 
+  }
+  .whatsapp-texto {
+    display inline-block;  mostra o texto 
+  }
+}
+style
+head
+a href=httpswa.me5519994844122 target=_blank class=whatsapp-fixo
+  img src=httpsupload.wikimedia.orgwikipediacommons66bWhatsApp.svg alt=WhatsApp class=whatsapp-icone
+  span class=whatsapp-textoSolicite um orçamentospan
+a
+body
+
+header
+  div class=logo
+    img src=imagenslogo-teste.jpeg alt=Logo BC Marmoraria
+  div
+
+  div class=frase-topo
+    Marmoraria e Porcelanataria
+  div
+
+  div class=menu-toggle onclick=toggleMenu()☰div
+
+  nav id=menu
+    a href=#Homea
+    a href=#produtosServiçosa
+    a href=#sobreSobrea
+    a href=#localizacaoLocalizaçãoa
+    a href=#contatoContatoa
+  nav
+header
+
+div class=hero
+
+ p class=hero-frase
+  Excelência em mármores, granitos, quartzitos e superfícies ultracompactas para projetos exclusivos.
+p
+
+p class=hero-subfrase
+  clique e conheça a aplicação e detalhes de cada material
+p
+
+div class=galeria
+
+  !-- CARROSEL 1 - GRANITO --
+  img src=imagenscarrosel1.png 
+       data-title=Granito Preto 
+       data-desc=Material de alta resistência e baixa porosidade, ideal para bancadas de cozinha e banheiro. Sua tonalidade elegante e acabamento preciso garantem durabilidade, fácil manutenção e sofisticação atemporal. 
+       onclick=abrirImagem(this)
+
+  !-- CARROSEL 2 - LÂMINA ULTRACOMPACTO --
+  img src=imagenscarroself2.png 
+       data-title=Lâmina Ultracompacto 
+       data-desc=Material de alta tecnologia, desenvolvido para oferecer máxima resistência, precisão estética e versatilidade de aplicação. Possui baixíssima absorção de água, excelente resistência a riscos, manchas e altas temperaturas, sendo indicado para bancadas de cozinha, banheiro, áreas gourmet, fachadas e revestimentos. Seu acabamento uniforme e contemporâneo permite projetos sofisticados, com linhas minimalistas, grandes formatos e desempenho superior, atendendo aos mais altos padrões técnicos e estéticos. 
+       onclick=abrirImagem(this)
+
+  !-- CARROSEL 3 - MÁRMORE --
+  img src=imagenscarroself3.png 
+       data-title=Mármore Branco Paraná (Dolomítico) 
+       data-desc=Mármore dolomítico de excelente resistência, indicado para bancadas de cozinha, banheiro e áreas internas. Apresenta tonalidade branca elegante, veios suaves e acabamento refinado, que realçam a luminosidade e a estética natural do ambiente. Para garantir maior durabilidade e preservar sua beleza ao longo do tempo, é indispensável a impermeabilização adequada e a adoção de cuidados no uso diário. 
+       onclick=abrirImagem(this)
+
+  !-- CARROSEL 4 - QUARTZITO --
+  img src=imagenscarroself4.png 
+       data-title=Quartzito 
+       data-desc=O quartzito é uma pedra natural de alta performance, reconhecida pela sua resistência superior, baixa absorção e excelente durabilidade. Ideal para bancadas de cozinhas, banheiros e áreas gourmet, oferece ótimo desempenho frente a riscos e calor, aliado à necessidade de impermeabilização adequada para garantir longevidade. Cada chapa possui veios e tonalidades únicas, proporcionando exclusividade estética e sofisticação natural aos projetos, elevando o padrão dos ambientes com personalidade e valor agregado. 
+       onclick=abrirImagem(this)
+
+  !-- CARROSEL 5 - QUARTZO --
+  img src=imagenscarroself5.png 
+       data-title=Quartzo 
+       data-desc=Superfície moderna, resistente e de baixa porosidade, ideal para bancadas internas. Oferece uniformidade estética, fácil manutenção e alto padrão de acabamento. Não é recomendado para áreas com alta temperatura ou contato direto com calor, garantindo assim maior durabilidade e desempenho do material. 
+       onclick=abrirImagem(this)
+
+  !-- CARROSEL 6 - TRAVERTINO --
+  img src=imagenscarroself6.png 
+       data-title=Travertino Romano 
+       data-desc=Pedra natural de estética clássica e textura marcante, o Travertino Romano confere elegância atemporal e identidade única aos projetos. Sua formação natural garante variações exclusivas de veios e tonalidades, valorizando ambientes internos como banheiros, lavabos, halls e áreas decorativas. Quando corretamente tratado e impermeabilizado, oferece bom desempenho, durabilidade e acabamento refinado, sendo uma escolha que une beleza natural, sofisticação e exclusividade. 
+       onclick=abrirImagem(this)
+
+div
+
+div
+
+!-- LIGHTBOX --
+div class=lightbox id=lightbox
+  span onclick=fecharImagem() style=positionabsolute;top20px;right30px;font-size40px;color#fff;cursorpointer;×span
+  div class=lightbox-content
+    img id=lightbox-img
+    div class=lightbox-text
+      h2 id=lightbox-titleh2
+      p id=lightbox-descp
+    div
+  div
+div
+
+!-- SEÇÃO SERVIÇOS ENTREGUES --
+section id=produtos
+  h3Serviços entreguesh3
+  div class=servicos-grid
+    img src=imagensTrabalho-4.jpeg alt=Trabalho 4
+    img src=imagensTrabalho-6.jpeg alt=Trabalho 6
+    img src=imagensTrabalho-7.jpeg alt=Trabalho 7
+    img src=imagensTrabalho-8.jpeg alt=Trabalho 8
+    img src=imagensTrabalho-10.jpeg alt=Trabalho 10
+    img src=imagensTrabalho-12.jpeg alt=Trabalho 12
+  div
+section
+
+!-- SEÇÃO SOBRE NOS (MOVIDA PARA BAIXO DE SERVIÇOS) --
+section id=sobre class=sobre
+  h3Sobre nósh3
+
+  div class=sobre-box
+
+    div class=sobre-imagens
+      img src=imagensmamoraria-antes.jpeg alt=Marmoraria antes
+      img src=imagensmarmoria-depois.jpeg alt=Marmoraria depois
+    div
+
+  div class=sobre-texto
+
+p
+Nossa história começou em agosto de 2020, de forma simples e dedicada. Na varanda de casa, com poucas ferramentas, atuávamos exclusivamente como porcelanataria, realizando pequenos trabalhos em porcelanato, como nichos e lavatórios, sempre com foco em qualidade e acabamento.
+p
+
+div id=texto-completo style=displaynone;
+
+p
+Com o tempo, passamos a desenvolver bancadas de cozinha e firmamos parcerias com escritórios de arquitetura, o que elevou o nível de complexidade dos projetos e impulsionou uma evolução constante em técnica, precisão e padrão de entrega.
+p
+
+p
+Hoje, somos uma marmoraria e porcelanataria completa, trabalhando com uma ampla variedade de materiais, como granitos, mármores, quartzo, quartzito e lâminas ultracompactas.
+p
+
+div
+
+button onclick=mostrarTexto() class=botao-lermais
+Ler mais
+button
+
+div
+  div
+section
+
+!-- SEÇÃO LOCALIZAÇÃO --
+section id=localizacao
+  h3Localizaçãoh3
+  div class=localizacao-box
+    pa href=httpswww.google.commapssearchapi=1&query=Rua+Equador,+91,+Santa+Bárbara+d'Oeste+SP target=_blankComo chegar Rua Equador, nº 91, Jardim Sartori, Santa Bárbara d'Oeste - SPap
+    iframe src=httpswww.google.commapsembedpb=!1m18!1m12!1m3!1d3661.652422545104!2d-47.41382698452746!3d-22.74585954219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8e9be3f8280b1%3A0xf98c8be1a34e8c83!2sRua+Equador%2C+91+-+Jardim+Sartori%2C+Santa+B%C3%A1rbara+d'Oeste+-+SP!5e0!3m2!1spt-BR!2sbr!4v1704290000000!5m2!1spt-BR!2sbr allowfullscreen= loading=lazyiframe
+  div
+section
+
+!-- SEÇÃO CONTATO --
+section id=contato
+  h3Contatoh3
+  div class=contact-box
+    pTelefone a href=tel+5519994844122(19) 99484-4122ap
+    pEmail a href=mailtobcbancadas@gmail.combcbancadas@gmail.comap
+    pInstagram a href=httpswww.instagram.combecbancadas target=_blank@becbancadasap
+  div
+section
+
+script
+
+function abrirImagem(img){
+  document.getElementById(lightbox).style.display = flex;
+  document.getElementById(lightbox-img).src = img.src;
+  document.getElementById(lightbox-title).innerText = img.dataset.title;
+  document.getElementById(lightbox-desc).innerText = img.dataset.desc;
+}
+
+function fecharImagem(){
+  document.getElementById(lightbox).style.display = none;
+}
+
+function mostrarTexto(){
+  const texto = document.getElementById(texto-completo);
+  const botao = document.querySelector(.botao-lermais);
+
+  if(texto.style.display === none){
+    texto.style.display = block;
+    botao.innerText = Ler menos;
+  } else {
+    texto.style.display = none;
+    botao.innerText = Ler mais;
+  }
+}
+
+function toggleMenu(){
+  const menu = document.getElementById(menu);
+  menu.classList.toggle(active);
+}
+
+script
+
+body
+html
